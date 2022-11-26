@@ -5,11 +5,11 @@ let homeScoreBtnThree = document.getElementById("home-score-btn-3")
 let homeScore = 0
 
 
-let guestScoreEl = document.getElementById("guest-score")
-let guestScoreBtnOne = document.getElementById("guest-score-btn-1")
-let guestScoreBtnTwo = document.getElementById("guest-score-btn-2")
-let guestScoreBtnThree = document.getElementById("guest-score-btn-3")
-let guestScore = 0
+let awayScoreEl = document.getElementById("away-score")
+let awayScoreBtnOne = document.getElementById("away-score-btn-1")
+let awayScoreBtnTwo = document.getElementById("away-score-btn-2")
+let awayScoreBtnThree = document.getElementById("away-score-btn-3")
+let awayScore = 0
 
 
 function addHome1() {
@@ -27,17 +27,17 @@ function addHome3() {
     homeScoreEl.textContent = homeScore
 }
 
-function addGuest1() {
-    guestScore += 1
-    guestScoreEl.textContent = guestScore
+function addAway1() {
+    awayScore += 1
+    awayScoreEl.textContent = awayScore
 }
 
-function addGuest2() {
-    guestScore += 2
-    guestScoreEl.textContent = guestScore
+function addAway2() {
+    awayScore += 2
+    awayScoreEl.textContent = awayScore
 }
 
-function addGuest3() {
-    guestScore += 3
-    guestScoreEl.textContent = guestScore
+function addAway3() {
+    awayScore += 3
+    awayScoreEl.textContent = awayScore
 }
