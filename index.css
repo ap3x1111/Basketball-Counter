@@ -8,9 +8,9 @@ body {
 .home,
 .away {
     background: #0a0001;
-    font-size: 90px;
+    padding: 20px;
     color: #F94F6D;
-    width: 120px;
+    max-width: 100%;
     margin: 20px;
     border-radius: 10px;
 }
@@ -23,7 +23,7 @@ body {
 button {
     background: none;
     font-size: 20px;
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 
