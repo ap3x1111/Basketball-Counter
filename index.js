@@ -1,43 +1,19 @@
-let homeScoreEl = document.getElementById("home-score")
-let homeScoreBtnOne = document.getElementById("home-score-btn-1")
-let homeScoreBtnTwo = document.getElementById("home-score-btn-2")
-let homeScoreBtnThree = document.getElementById("home-score-btn-3")
-let homeScore = 0
+let homeScoreEl = document.getElementById("home-score");
+let awayScoreEl = document.getElementById("away-score");
+let homeScore = 0;
+let awayScore = 0;
 
-
-let awayScoreEl = document.getElementById("away-score")
-let awayScoreBtnOne = document.getElementById("away-score-btn-1")
-let awayScoreBtnTwo = document.getElementById("away-score-btn-2")
-let awayScoreBtnThree = document.getElementById("away-score-btn-3")
-let awayScore = 0
-
-
-function addHome1() {
-    homeScore += 1
-    homeScoreEl.textContent = homeScore
-}
-
-function addHome2() {
-    homeScore += 2
-    homeScoreEl.textContent = homeScore
-}
-
-function addHome3() {
-    homeScore += 3
-    homeScoreEl.textContent = homeScore
-}
-
-function addAway1() {
-    awayScore += 1
-    awayScoreEl.textContent = awayScore
-}
-
-function addAway2() {
-    awayScore += 2
-    awayScoreEl.textContent = awayScore
-}
-
-function addAway3() {
-    awayScore += 3
-    awayScoreEl.textContent = awayScore
-}
+// Listen for clicks on the whole document
+document.addEventListener('click', function (event) {
+    let el = event.target;
+    // Check if a home or away button was clicked by using the classes to tell them apart
+    if (el.matches('.home')) {
+        // we need to use parse int because the data attribute value is a string rather than an integer.
+        homeScore += parseInt(el.dataset.inc);
+        homeScoreEl.textContent = homeScore
+    }
+    if (el.matches('.away')) {
+        awayScore += parseInt(el.dataset.inc);
+        awayScoreEl.textContent = awayScore
+    }
+});
